@@ -4,7 +4,7 @@ This is the website for [https://shearsperformance.com/](https://shearsperforman
 
 ## Website Copy
 
-All of the website copy can be found under this file: [site.ts](https://github.com/gammatitan/shears-performance/blob/main/src/content/site.ts).
+All of the website copy can be found under this file: [site.ts](https://github.com/NathanShears/shears-performance/blob/main/src/content/site.ts)
 
 ## Project Info
 
