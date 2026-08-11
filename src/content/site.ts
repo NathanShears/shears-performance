@@ -153,7 +153,7 @@ export const site = {
 
   home: {
     hero: {
-      eyebrow: "Sport & Performance Psychology",
+      eyebrow: "Sport & Performance Psychology!",
       title: {
         lead: "Train the mind behind the ",
         highlight: "performance",
