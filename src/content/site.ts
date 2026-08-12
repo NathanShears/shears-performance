@@ -351,7 +351,7 @@ export const site = {
 
   how: {
     hero: {
-      eyebrow: "How I can assist",
+      eyebrow: "How I can help",
       title: {
         lead: "One approach, many forms - always ",
         highlight: "tailored to you.",
