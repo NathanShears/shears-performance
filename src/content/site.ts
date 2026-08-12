@@ -225,7 +225,7 @@ export const site = {
     },
 
     howPreview: {
-      eyebrow: "How I assist",
+      eyebrow: "How I help",
       title: "Flexible, integrated, and built around you.",
       items: [
         {
