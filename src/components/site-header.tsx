@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
-import { routes, site } from "@/content/site";
-import { MenuIcon } from "./icons";
+import { routes, site } from '@/content/site';
+import { MenuIcon } from './icons';
 
 const { brand, nav } = site;
 
@@ -24,12 +24,12 @@ export function SiteHeader() {
           <Image
             src={brand.logo.src}
             alt={brand.logo.alt}
-            width={44}
-            height={44}
+            width={66}
+            height={66}
             className="brand__mark"
             priority
           />
-          <span style={{ textAlign: "left", lineHeight: 1.05 }}>
+          <span style={{ textAlign: 'left', lineHeight: 1.05 }}>
             <span className="brand__top">{brand.nameTop}</span>
             <span className="brand__bottom">{brand.nameBottom}</span>
           </span>
@@ -41,7 +41,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className="nav__link"
-              aria-current={isCurrent(link.href) ? "page" : undefined}
+              aria-current={isCurrent(link.href) ? 'page' : undefined}
             >
               {link.label}
             </Link>
@@ -73,7 +73,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className="nav__link"
-              aria-current={isCurrent(link.href) ? "page" : undefined}
+              aria-current={isCurrent(link.href) ? 'page' : undefined}
               onClick={() => setOpen(false)}
             >
               {link.label}

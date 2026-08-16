@@ -424,6 +424,8 @@ blockquote {
 }
 
 .brand__mark {
+  width: 44px;
+  height: 44px;
   border-radius: 11px;
   object-fit: cover;
   flex: 0 0 auto;
@@ -459,6 +461,11 @@ blockquote {
   font-weight: 500;
   color: var(--ink-soft);
   padding: 8px 14px;
+  transition: all 0.2s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.7;
 }
 
 .nav__link[aria-current='page']::after {
