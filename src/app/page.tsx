@@ -1,18 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { FaqAccordion } from "@/components/faq-accordion";
-import { Heading } from "@/components/heading";
-import { Icon } from "@/components/icons";
-import { Marquee } from "@/components/marquee";
-import { FaqStructuredData } from "@/components/structured-data";
-import { routes, site } from "@/content/site";
+import { FaqAccordion } from '@/components/faq-accordion';
+import { Heading } from '@/components/heading';
+import { Icon } from '@/components/icons';
+import { Marquee } from '@/components/marquee';
+import { FaqStructuredData } from '@/components/structured-data';
+import { routes, site } from '@/content/site';
 
 const { home } = site;
 
 export default function HomePage() {
-  const { hero, whoPreview, howPreview, aboutPreview, testimonialPreview, faq, cta } =
-    home;
+  const {
+    hero,
+    whoPreview,
+    howPreview,
+    aboutPreview,
+    testimonialPreview,
+    faq,
+    cta,
+  } = home;
 
   return (
     <>
@@ -31,7 +38,10 @@ export default function HomePage() {
         <div className="container homeHero__grid">
           <div className="homeHero__copy">
             <div className="badgePill" style={{ marginBottom: 28 }}>
-              <span className="badgePill__dot" style={{ width: 8, height: 8 }} />
+              <span
+                className="badgePill__dot"
+                style={{ width: 8, height: 8 }}
+              />
               <span className="badgePill__label">{hero.eyebrow}</span>
             </div>
 
@@ -43,11 +53,13 @@ export default function HomePage() {
               <Link href={hero.primaryCta.href} className="btn btn--accent">
                 {hero.primaryCta.label}
               </Link>
-              <Link href={hero.secondaryCta.href} className="btn btn--ghostLight">
+              <Link
+                href={hero.secondaryCta.href}
+                className="btn btn--ghostLight"
+              >
                 {hero.secondaryCta.label}
               </Link>
             </div>
-
           </div>
 
           <div className="homeHero__media">
@@ -65,11 +77,13 @@ export default function HomePage() {
           <dl className="homeHero__stats">
             {hero.stats.map((stat, index) => (
               <div key={stat.label} className="homeHero__stat">
-                {index > 0 && <span aria-hidden="true" className="homeHero__statRule" />}
+                {index > 0 && (
+                  <span aria-hidden="true" className="homeHero__statRule" />
+                )}
                 <div>
                   <dt
                     className="display homeHero__statValue"
-                    style={stat.accent ? { color: "var(--accent)" } : undefined}
+                    style={stat.accent ? { color: 'var(--accent)' } : undefined}
                   >
                     {stat.value}
                   </dt>
@@ -84,7 +98,10 @@ export default function HomePage() {
       </section>
 
       {/* -------------------------------------------------- who I help */}
-      <section className="container" style={{ padding: "90px var(--gutter) 20px" }}>
+      <section
+        className="container"
+        style={{ padding: '90px var(--gutter) 20px' }}
+      >
         <div className="sectionHead">
           <div>
             <div className="eyebrow" style={{ marginBottom: 14 }}>
@@ -111,7 +128,10 @@ export default function HomePage() {
       </section>
 
       {/* -------------------------------------------------- how I help */}
-      <section className="container" style={{ padding: "70px var(--gutter) 100px" }}>
+      <section
+        className="container"
+        style={{ padding: '70px var(--gutter) 100px' }}
+      >
         <div className="panel">
           <div className="eyebrow eyebrow--onNavy" style={{ marginBottom: 16 }}>
             {howPreview.eyebrow}
@@ -122,7 +142,9 @@ export default function HomePage() {
             <div className="howPreview__list">
               {howPreview.items.map((item) => (
                 <div key={item.number} className="howPreview__row">
-                  <span className="display howPreview__number">{item.number}</span>
+                  <span className="display howPreview__number">
+                    {item.number}
+                  </span>
                   <div>
                     <div className="howPreview__rowTitle">{item.title}</div>
                     <div className="howPreview__rowBody">{item.body}</div>
@@ -138,20 +160,25 @@ export default function HomePage() {
             </div>
 
             {howPreview.image && (
-              <Image
-                src={howPreview.image.src}
-                alt={howPreview.image.alt}
-                width={900}
-                height={750}
-                className="howPreview__image"
-              />
+              <div className="howPreview__imageContainer">
+                <Image
+                  src={howPreview.image.src}
+                  alt={howPreview.image.alt}
+                  width={900}
+                  height={750}
+                  className="howPreview__image"
+                />
+              </div>
             )}
           </div>
         </div>
       </section>
 
       {/* ------------------------------------ about + testimonial teaser */}
-      <section className="container grid grid--2" style={{ padding: "0 var(--gutter) 40px", gap: 24 }}>
+      <section
+        className="container grid grid--2"
+        style={{ padding: '0 var(--gutter) 40px', gap: 24 }}
+      >
         <div className="teaserCard">
           <div className="eyebrow" style={{ marginBottom: 16 }}>
             {aboutPreview.eyebrow}
@@ -161,7 +188,7 @@ export default function HomePage() {
           <Link
             href={aboutPreview.link.href}
             className="arrowLink"
-            style={{ marginTop: "auto", alignSelf: "flex-start" }}
+            style={{ marginTop: 'auto', alignSelf: 'flex-start' }}
           >
             {aboutPreview.link.label}
           </Link>
@@ -174,12 +201,17 @@ export default function HomePage() {
           <p className="display quoteCard__quote">{testimonialPreview.quote}</p>
           <div className="quoteCard__foot">
             <div>
-              <div style={{ fontWeight: 600, fontSize: 15 }}>{testimonialPreview.name}</div>
-              <div style={{ fontSize: 13, color: "var(--on-navy-muted)" }}>
+              <div style={{ fontWeight: 600, fontSize: 15 }}>
+                {testimonialPreview.name}
+              </div>
+              <div style={{ fontSize: 13, color: 'var(--on-navy-muted)' }}>
                 {testimonialPreview.role}
               </div>
             </div>
-            <Link href={testimonialPreview.link.href} className="arrowLink arrowLink--pill">
+            <Link
+              href={testimonialPreview.link.href}
+              className="arrowLink arrowLink--pill"
+            >
               {testimonialPreview.link.label}
             </Link>
           </div>
@@ -187,8 +219,11 @@ export default function HomePage() {
       </section>
 
       {/* ----------------------------------------------------------- faq */}
-      <section className="container container--narrow" style={{ padding: "70px var(--gutter) 10px" }}>
-        <div style={{ textAlign: "center", marginBottom: 38 }}>
+      <section
+        className="container container--narrow"
+        style={{ padding: '70px var(--gutter) 10px' }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: 38 }}>
           <div className="eyebrow" style={{ marginBottom: 14 }}>
             {faq.eyebrow}
           </div>
@@ -197,23 +232,31 @@ export default function HomePage() {
 
         <FaqAccordion items={faq.items} />
 
-        <div style={{ display: "flex", justifyContent: "center", marginTop: 26 }}>
-          <Link href={faq.link.href} className="arrowLink arrowLink--accentHover">
+        <div
+          style={{ display: 'flex', justifyContent: 'center', marginTop: 26 }}
+        >
+          <Link
+            href={faq.link.href}
+            className="arrowLink arrowLink--accentHover"
+          >
             {faq.link.label}
           </Link>
         </div>
       </section>
 
       {/* ----------------------------------------------------------- cta */}
-      <section className="container" style={{ padding: "30px var(--gutter) 76px" }}>
+      <section
+        className="container"
+        style={{ padding: '30px var(--gutter) 76px' }}
+      >
         <div className="ctaBand">
           <div aria-hidden="true" className="ctaBand__blade" />
           <div aria-hidden="true" className="ctaBand__stripe" />
           <div className="ctaBand__copy">
             <div
               style={{
-                display: "inline-flex",
-                alignItems: "center",
+                display: 'inline-flex',
+                alignItems: 'center',
                 gap: 10,
                 marginBottom: 14,
               }}
@@ -222,16 +265,20 @@ export default function HomePage() {
                 style={{
                   width: 8,
                   height: 8,
-                  background: "var(--accent)",
-                  borderRadius: "50%",
+                  background: 'var(--accent)',
+                  borderRadius: '50%',
                 }}
               />
               <span className="badgePill__label">{cta.eyebrow}</span>
             </div>
-            <Heading value={cta.title} as="h2" className="display ctaBand__title" />
+            <Heading
+              value={cta.title}
+              as="h2"
+              className="display ctaBand__title"
+            />
             <p className="ctaBand__body">{cta.body}</p>
           </div>
-          <div style={{ position: "relative", zIndex: 1 }}>
+          <div style={{ position: 'relative', zIndex: 1 }}>
             <Link href={cta.action.href} className="btn btn--accent">
               {cta.action.label}
             </Link>

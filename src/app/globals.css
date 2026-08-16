@@ -191,7 +191,9 @@ blockquote {
   font-weight: 600;
   font-size: 16px;
   padding: 17px 32px;
-  transition: background-color 0.16s ease, border-color 0.16s ease,
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
     color 0.16s ease;
 }
 
@@ -254,7 +256,9 @@ blockquote {
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  transition: gap 0.16s ease, color 0.16s ease;
+  transition:
+    gap 0.16s ease,
+    color 0.16s ease;
 }
 .arrowLink:hover {
   gap: 12px;
@@ -457,8 +461,8 @@ blockquote {
   padding: 8px 14px;
 }
 
-.nav__link[aria-current="page"]::after {
-  content: "";
+.nav__link[aria-current='page']::after {
+  content: '';
   position: absolute;
   left: 14px;
   right: 14px;
@@ -519,7 +523,7 @@ blockquote {
   font-size: 17px;
 }
 
-.header__drawer .nav__link[aria-current="page"]::after {
+.header__drawer .nav__link[aria-current='page']::after {
   left: 4px;
   right: auto;
   width: 22px;
@@ -591,6 +595,8 @@ blockquote {
 
 /* Dark panel shared by "how I help", "challenges" and "qualifications" */
 .panel {
+  position: relative;
+
   background: var(--navy);
   border-radius: 28px;
   padding: 56px 52px;
@@ -941,8 +947,8 @@ textarea.field__input {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   grid-template-areas:
-    "copy  media"
-    "stats media";
+    'copy  media'
+    'stats media';
   gap: 0 56px;
   align-items: center;
 }
@@ -970,7 +976,7 @@ textarea.field__input {
 }
 
 .homeHero__title .accentText::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -1163,12 +1169,32 @@ textarea.field__input {
   align-self: flex-start;
 }
 
+.howPreview__imageContainer {
+  position: absolute;
+  width: 449px;
+  height: 375px;
+  right: 64px;
+  top: 210px;
+  box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 .howPreview__image {
   width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.45);
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1080px) {
+  .howPreview__imageContainer {
+    position: relative;
+    right: unset;
+    top: unset;
+    width: unset;
+    height: auto;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1713,7 +1739,7 @@ textarea.field__input {
     color: var(--cream);
   }
 
-  .header__drawer .nav__link[aria-current="page"]::after {
+  .header__drawer .nav__link[aria-current='page']::after {
     background: var(--accent);
   }
 
@@ -1764,9 +1790,9 @@ textarea.field__input {
   .homeHero__grid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "copy"
-      "media"
-      "stats";
+      'copy'
+      'media'
+      'stats';
     padding-block: 56px 44px;
     gap: 32px 0;
   }
