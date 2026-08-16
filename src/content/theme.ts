@@ -15,8 +15,8 @@ export const theme = {
     ink: "#16233F",
     inkSoft: "#3A4560",
     muted: "#5A6478",
-    mutedSoft: "#6A7488",
-    mutedFaint: "#8A93A6",
+    mutedSoft: "#5D6780",
+    mutedFaint: "#647087",
 
     navy: "#133168",
     navyDeep: "#0E2A5E",
@@ -25,7 +25,7 @@ export const theme = {
     onNavy: "#C4CEE4",
     onNavyMuted: "#9AA6C2",
     onNavyBright: "#DDE3EF",
-    onNavyFaint: "#7683A0",
+    onNavyFaint: "#8996B4",
 
     accent: "#F4A020",
     accentLight: "#FFB13A",

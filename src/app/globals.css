@@ -16,8 +16,8 @@
   --ink: #16233f;
   --ink-soft: #3a4560;
   --muted: #5a6478;
-  --muted-soft: #6a7488;
-  --muted-faint: #8a93a6;
+  --muted-soft: #5d6780;
+  --muted-faint: #647087;
 
   --navy: #133168;
   --navy-deep: #0e2a5e;
@@ -26,7 +26,7 @@
   --on-navy: #c4cee4;
   --on-navy-muted: #9aa6c2;
   --on-navy-bright: #dde3ef;
-  --on-navy-faint: #7683a0;
+  --on-navy-faint: #8996b4;
 
   --accent: #f4a020;
   --accent-light: #ffb13a;
@@ -1019,12 +1019,12 @@ textarea.field__input {
 
 .homeHero__stat {
   display: flex;
-  gap: 34px;
+  flex-direction: column;
 }
 
-.homeHero__statRule {
-  width: 1px;
-  background: rgba(255, 255, 255, 0.15);
+.homeHero__stat[data-rule] {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 34px;
 }
 
 .homeHero__statValue {
@@ -1962,8 +1962,11 @@ textarea.field__input {
 
   .homeHero__stat {
     flex: 1;
-    gap: 14px;
     min-width: 0;
+  }
+
+  .homeHero__stat[data-rule] {
+    padding-left: 14px;
   }
 
   .homeHero__statValue {

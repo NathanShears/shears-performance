@@ -76,19 +76,18 @@ export default function HomePage() {
 
           <dl className="homeHero__stats">
             {hero.stats.map((stat, index) => (
-              <div key={stat.label} className="homeHero__stat">
-                {index > 0 && (
-                  <span aria-hidden="true" className="homeHero__statRule" />
-                )}
-                <div>
-                  <dt
-                    className="display homeHero__statValue"
-                    style={stat.accent ? { color: 'var(--accent)' } : undefined}
-                  >
-                    {stat.value}
-                  </dt>
-                  <dd className="homeHero__statLabel">{stat.label}</dd>
-                </div>
+              <div
+                key={stat.label}
+                className="homeHero__stat"
+                data-rule={index > 0 ? "" : undefined}
+              >
+                <dt
+                  className="display homeHero__statValue"
+                  style={stat.accent ? { color: 'var(--accent)' } : undefined}
+                >
+                  {stat.value}
+                </dt>
+                <dd className="homeHero__statLabel">{stat.label}</dd>
               </div>
             ))}
           </dl>
