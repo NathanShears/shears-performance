@@ -535,7 +535,7 @@ export const site = {
       submit: 'Send message',
       success: {
         title: 'Message sent',
-        body: "Thanks for reaching out - I'll get back to you soon. (This is a demo form; wire it up to your inbox to go live.)",
+        body: "Thanks for reaching out - I'll get back to you soon.",
         again: 'Send another',
       },
     },
